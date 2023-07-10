@@ -35,19 +35,23 @@
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        ans = 0
-        substring = []
 
-        for char in s:
-            while char in substring:
-                substring.pop(0)
-            substring.append(char)
-            if ans < len(substring):
-                ans = len(substring)
-        return ans
+        left, right = 0, 0
+        max_length = 0
+        window = set()
+
+        while right < len(s):
+            while s[right] in window:
+                window.discard(s[left])
+                left +=1
+            max_length = max(max_length, right-left+1)
+            window.add(s[right])
+            right += 1
+        return max_length
     
 sol = Solution()
 
 print(sol.lengthOfLongestSubstring("abcabcbb"))
 
-# beats 24.41%
+
+# Beats 65.7%
