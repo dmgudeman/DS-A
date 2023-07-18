@@ -22,3 +22,26 @@
 // 1 <= target <= 109
 // 1 <= nums.length <= 105
 // 1 <= nums[i] <= 104
+
+const minSubArrayLen = (target, nums) => {
+    let min_sub = Infinity
+    let right = 0
+    let left = 0
+    let total = 0
+
+    while (right < nums.length){
+        while (total < target) {
+            total =+ nums[right]
+            min_sub = Math.min(min_sub, right-left+1);
+            right++
+            
+            
+            }
+        left++
+
+        }
+    
+    
+    if ( min_sub === Infinity) return 0
+    return min_sub
+}
