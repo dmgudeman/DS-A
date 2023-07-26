@@ -27,4 +27,9 @@ class Solution:
             j += 1
 
         return merged
+    
+
+sol = Solution()
+
+print(sol.sortArray([3,2,5,6,7]))
 
