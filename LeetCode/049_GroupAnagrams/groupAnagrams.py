@@ -24,9 +24,9 @@
 # 0 <= strs[i].length <= 100
 # strs[i] consists of lowercase English letters.
 
-class Solution:
-    def groupAnagrams(self, strs):
+# class Solution:
+#     def groupAnagrams(self, strs):
         
-        for str in strs:
-            for char in str:
-                if 
+#         for str in strs:
+#             for char in str:
+#                 if 
