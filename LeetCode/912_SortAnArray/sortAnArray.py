@@ -30,9 +30,9 @@ class Solution:
         left = self.sortArray(nums[0:mid])
         right = self.sortArray(nums[mid::])
 
-        return merge(left, right)
+        return self.merge(left, right)
     
-    def merge(left, right):
+    def merge(self, left, right):
         merged = []
 
         while len(left) and len(right):
