@@ -37,11 +37,11 @@ class Solution:
 
         while len(left) and len(right):
             if left[0] < right[0]:
-                merged.push(left.pop(0))
+                merged.append(left.pop(0))
             else:
-                merged.push(right.pop(0))
+                merged.append(right.pop(0))
         
-        return merged
+        return merged + left + right
 
     
 

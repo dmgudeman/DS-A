@@ -1,0 +1,4 @@
+
+O(logn)
+needs a sorted array usually
+
