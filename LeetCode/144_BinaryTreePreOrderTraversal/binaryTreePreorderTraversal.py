@@ -5,6 +5,6 @@ class Solution:
 
         if not root: return []
 
-        left = self.inorderTraversal(root.left)
-        right = self.inorderTraversal(root.right)
+        left = self.preorderTraversal(root.left)
+        right = self.preorderTraversal(root.right)
         return [root.val] +left + right
