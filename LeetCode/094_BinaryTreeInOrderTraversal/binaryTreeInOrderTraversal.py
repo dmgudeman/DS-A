@@ -5,7 +5,7 @@
 class Solution:
     def inorderTraversal(self, root):
 
-        if root is None: return root
+        if not root: return []
 
         left = self.inorderTraversal(root.left)
         right = self.inorderTraversal(root.right)
