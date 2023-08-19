@@ -21,7 +21,7 @@ class Solution:
             level = []
 
             for _ in range(queueLen):
-            # shift out of queue
+                # shift out of queue
                 node = queue.popleft()
                 if node:
                     level.append(node.val)
