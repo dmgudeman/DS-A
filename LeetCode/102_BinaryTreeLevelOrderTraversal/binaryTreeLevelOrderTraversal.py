@@ -17,6 +17,7 @@ class Solution:
         output = []
 
         while queue:
+            # snapshot of current queue which is a layer
             queueLen = len(queue)
             level = []
 
@@ -25,7 +26,7 @@ class Solution:
                 node = queue.popleft()
                 if node:
                     level.append(node.val)
-                    # add children to queue
+                    # add children to queue which is adding the next layer
                     queue.append(node.left)
                     queue.append(node.right)
             

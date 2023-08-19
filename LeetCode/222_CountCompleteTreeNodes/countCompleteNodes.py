@@ -7,20 +7,27 @@ from collections import deque
 
 class Solution:
     def countNodes(self, root):
+        # 1. create a queue
+        # 2. initialize with root
+        # 3. run a while loop
+        # 4. pop the left node
+        # 5. process node
+        # 6. append children nodes
+        
 
         queue = deque()
         queue.append(root)
-        output = []
+        count = 0
 
         while queue:
 
                 # shift out of queue
             node = queue.popleft()
             if node:
-                output.append(node.val)
+                count += 1
                 # add children to queue
                 queue.append(node.left)
                 queue.append(node.right)
             
           
-        return len(output)
+        return count
