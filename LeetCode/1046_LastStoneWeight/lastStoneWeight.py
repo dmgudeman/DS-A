@@ -21,7 +21,5 @@ class Solution:
 
             if second > first:
                 heapq.heappush(stones, first -second)
-        
-        
         if stones: return abs(stones[0])
         return 0
